@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Book a Ride | Marcus Logistics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book a Ride</a></li>
+                <li><a href="courier.html">Courier Service</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#contact-me">Contact Me</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="booking-section">
+        <div class="booking-container">
+            <h1 class="booking-title">Book a Ride</h1>
+            <form class="booking-form">
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="pickup">Name</label>
+                        <input type="text" id="firstName" placeholder="Enter Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Surname</label>
+                        <input type="text" id="lastName" placeholder="Enter Surname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pickup">Pickup Address</label>
+                        <input type="text" id="pickup" placeholder="Enter location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination Address</label>
+                        <input type="text" id="destination" placeholder="Enter destination" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="luggage">Luggage</label>
+                        <select id="luggage" required>
+                            <option value="">Select luggage amount</option>
+                            <option value="small">Small (1-2 bags)</option>
+                            <option value="medium">Medium (3-4 bags)</option>
+                            <option value="large">Large (5+ bags)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp Number</label>
+                    <input type="tel" id="whatsapp" placeholder="Enter your WhatsApp number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="whatsapp">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Special Instructions</label>
+                    <textarea id="notes" rows="3" placeholder="Any special requests?"></textarea>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Book</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="Footer" id="contact-me">
+        <div class="company-name">
+            <h1>Marcus Logistics</h1>
+            <h1>&</h1>
+            <h1>Shuttle Service (Pty) Ltd</h1>
+            <p>Providing safe, Luxurious, and</p>
+            <p>on-time transport services</p>
+            <p>you can trust. Always</p>
+        </div>
+
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking.html">Book a Ride</a></li>
+            <li><a href="courier.html">Courier Service</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#contact-me">Contact Me</a></li>
+        </ul>
+
+        <div class="Footer-contact">
+            <p><i class="fas fa-phone"></i> +27 76-508-2810</p>
+            <p><i class="fas fa-map-marker-alt"></i> Polokwane, South Africa</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <hr>
+        <p class="copyright">© 2023 Marcus Logistics & Shuttle Service (Pty) Ltd. All Rights Reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
