@@ -24,7 +24,7 @@ jobs:
       # Step 3: Sync files to VPS using rsync
       - name: Deploy to VPS
         run: |
-          rsync -avz --delete ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/mywebsite/MarcusLogisti/
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/mywebsite/MarcusLogisti/
 
           ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
             cd /var/www/mywebsite/MarcusLogisti
