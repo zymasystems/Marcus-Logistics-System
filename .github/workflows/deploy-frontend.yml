@@ -1,5 +1,6 @@
 name: Deploy Frontend to VPS
 
+# Trigger on pushes to main
 on:
   push:
     branches:
@@ -10,19 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout your repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Start SSH agent
+      # Step 2: Set up SSH agent with VPS key
+      - name: Set up SSH
         uses: webfactory/ssh-agent@v0.8.0
         with:
           ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
 
-      - name: Test SSH connection
-        run: ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "echo Connected!"
-
+      # Step 3: Sync files to VPS using rsync
       - name: Deploy to VPS
         run: |
+          rsync -avz --delete ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/mywebsite/MarcusLogisti/
+
           ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
             cd /var/www/mywebsite/MarcusLogisti
             git pull origin main
