@@ -25,6 +25,6 @@ jobs:
       - name: Deploy to VPS
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
-            cd /var/www/mywebsite/MarcusLogisti
+            cd /var/www/mywebsite/MarcusLogisti_backup
             git pull origin main
           "
