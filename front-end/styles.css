@@ -263,6 +263,106 @@ body {
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
+/* ================================
+   LOGIN PAGE STYLES
+================================ */
+
+/* Main Section */
+.login-section {
+    padding: 120px 20px;
+    min-height: 100vh;
+    background: #f5f9fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Card */
+.login-container {
+    background: #ffffff;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(31, 58, 147, 0.12);
+    animation: fadeSlide 0.6s ease forwards;
+}
+
+/* Title */
+.login-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #1f3a93;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.login-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ffc107;
+    margin: 12px auto 0;
+}
+
+/* Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Input Groups */
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #1f3a93;
+    font-size: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #1f3a93;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(31, 58, 147, 0.25);
+}
+
+/* Login Button */
+.btn {
+    background-color: #1f3a93;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #15307a;
+    transform: translateY(-2px);
+}
+
+
+/* Animation */
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 .nav-links{display:flex;gap:20px;}
 .menu-toggle {
