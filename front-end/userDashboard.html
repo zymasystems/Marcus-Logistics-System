@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard | Marcus Logistics & Shuttle Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <button class="menu-toggle" aria-label="open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#Contact-me">Contact Me</a></li>
+                <li><a href="Login.html">Log In</a></li>
+                <li><a href="Signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- DASHBOARD -->
+    <section class="dashboard-section">
+        <div class="dashboard-container">
+            <h1 class="dashboard-title">Welcome to Your Dashboard</h1>
+            <p class="dashboard-desc">
+                Manage your transportation and parcel delivery services with ease.
+            </p>
+
+            <div class="action-grid">
+
+                <!-- RIDE REQUEST -->
+                <div class="action-card">
+                    <div class="icon-box">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Request a Ride</h3>
+                    <p>Book a ride to your destination in minutes.</p>
+                    <a href="booking.html" class="btn primary">Request Ride</a>
+                </div>
+
+                <!-- PARCEL DELIVERY -->
+                <div class="action-card">
+                    <div class="icon-box">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Parcel Delivery</h3>
+                    <p>Send packages securely and quickly.</p>
+                    <a href="#" class="btn primary">Send Parcel</a>
+                </div>
+
+                <!-- MANAGE REQUESTS -->
+                <div class="action-card">
+                    <div class="icon-box">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Manage Requests</h3>
+                    <p>Track, view, modify, or cancel your service requests.</p>
+                    <a href="#" class="btn secondary">Manage</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<script src="script.js"></script>
+ <script src="dashScript.js"></script>
+
+</body>
+</html>
