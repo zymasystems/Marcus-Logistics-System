@@ -1,0 +1,30 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy Staging to VPS
+        run: |
+          rsync -avz --delete ./ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/marcus-staging/
+
+          ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
+            cd /var/www/marcus-staging || exit 1
+
+            if [ -f package.json ]; then
+              npm install
+            fi
+
+            if command -v pm2 >/dev/null 2>&1; then
+              pm2 restart all || pm2 start ecosystem.config.js || true
+            fi
+          "
