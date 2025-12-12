@@ -155,6 +155,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+color: #1F3A93;
 }
 
 .Reason-images {
@@ -181,10 +182,61 @@ body {
   color: #1f3a93;
 }
 
+.services-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.services-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #1F3A93; /* Navy Blue from your brand */
+}
+
+.services-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-box {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-box img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1F3A93;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.5;
+}
+
 /* Updated Testimonials Section */
 .testimonials-section {
   padding: 80px 20px;
-  background-color: #ebebeb;
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -835,6 +887,12 @@ body {
     font-size: 1.5rem;
   }
 
+  .services-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+  
   /* Testimonials */
   .testimonials-section h2 {
     font-size: 2rem;
