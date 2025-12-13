@@ -26,6 +26,7 @@
     <!-- BOOKING PAGE -->
     <section class="booking-section">
         <div class="booking-container">
+            
             <div class="booking-header">
                 <h1>Request a Ride</h1>
                 <p>Fill in the details below and we will arrange your transport.</p>
@@ -35,24 +36,26 @@
 
                 <!-- CLIENT SELECT -->
                 <h3 class="form-section-title"><i class="fas fa-id-card"></i> Client Information</h3>
+                
                 <div class="form-group">
                     <label>Who is this booking for?</label>
-                    <select id="clientMode">
+
+                    <select id="bookingClientMode">
                         <option value="self">Myself (use saved profile)</option>
                         <option value="other">Someone else</option>
                     </select>
                 </div>
 
                 <!-- AUTO-FILLED CLIENT INFO -->
-                <div id="savedClient" class="client-preview">
-                    <p><strong>Name:</strong> <span id="clientName">John Doe</span></p>
-                    <p><strong>WhatsApp:</strong> <span id="clientPhone">+27 76 123 4567</span></p>
-                    <p><strong>Email:</strong> <span id="clientEmail">john@email.com</span></p>
+                <div id="bookingSavedClient" class="client-preview">
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>WhatsApp:</strong> +27 76 123 4567</p>
+                 <p><strong>Email:</strong> john@email.com</p>
                 </div>
+ 
 
                 <!-- MANUAL CLIENT INFO -->
-                <div id="manualClient" style="display:none;">
-
+            <div id="bookingManualClient" style="display:none;">
                 <!-- PERSONAL DETAILS -->
                 <h3 class="form-section-title"><i class="fas fa-user"></i> Passenger Details</h3>
                 <div class="form-row">
@@ -75,8 +78,9 @@
                         <label>Email (Optional)</label>
                         <input type="email" placeholder="example@email.com" />
                     </div>
-                                </div>
-
+                </div>
+            </div>
+            
                 <!-- TRIP DETAILS -->
                 <h3 class="form-section-title"><i class="fas fa-map-marker-alt"></i> Trip Details</h3>
                 <div class="form-row">
@@ -128,8 +132,6 @@
                 <div class="form-actions">
                     <a href="userDashboard.html" class="btn secondary">Cancel</a>
                     <button type="submit" class="btn primary">Submit Booking</button>
-                </div>
-            
                 </div>
             </form>
                     

@@ -40,21 +40,23 @@
 
         <div class="form-group">
           <label>Who is sending the parcel?</label>
-          <select id="clientMode">
-            <option value="self">Myself (use saved profile)</option>
-            <option value="other">Someone else</option>
-          </select>
+          
+            <select id="courierClientMode">
+                <option value="self">Myself (use saved profile)</option>
+                <option value="other">Someone else</option>
+            </select>
+
         </div>
 
         <!-- SAVED CLIENT -->
-        <div id="savedClient" class="client-preview">
-          <p><strong>Name:</strong> <span>John Doe</span></p>
-          <p><strong>WhatsApp:</strong> <span>+27 76 123 4567</span></p>
-          <p><strong>Email:</strong> <span>john@email.com</span></p>
+        <div id="courierSavedClient" class="client-preview">
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>WhatsApp:</strong> +27 76 123 4567</p>
+            <p><strong>Email:</strong> john@email.com</p>
         </div>
 
         <!-- MANUAL CLIENT -->
-        <div id="manualClient" style="display:none;">
+        <div id="courierManualClient" style="display:none;">
 
           <div class="form-row">
             <div class="form-group">
