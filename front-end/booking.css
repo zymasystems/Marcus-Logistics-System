@@ -1,0 +1,347 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f9fc;
+  color: #222;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 10%;
+  background: rgba(34, 34, 34, 0.504);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #ffc107;
+}
+
+/* MOBILE MENU BUTTON */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================
+   BOOKING / COURIER SECTIONS
+========================= */
+.booking-section,
+.courier-section {
+  padding: 120px 20px 60px;
+  min-height: 100vh;
+}
+
+.booking-container,
+.courier-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(31, 58, 147, 0.1);
+}
+
+.booking-header h1,
+.courier-header h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1f3a93;
+  margin-bottom: 10px;
+}
+
+.booking-header p,
+.courier-header p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   FORM SYSTEM (SHARED)
+========================= */
+.booking-form,
+.courier-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-section-title {
+  font-size: 1.1rem;
+  color: #1f3a93;
+  margin-top: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #1f3a93;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1f3a93;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* Client preview box */
+.client-preview {
+  background: #f0f4ff;
+  padding: 12px;
+  border: 1px solid #ccd6ff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.btn.primary {
+  background: #1f3a93;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #e0e0e0;
+  color: #000;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.Footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  color: #ffc107;
+}
+
+.footer-bottom {
+  background: #222;
+  text-align: center;
+  padding: 20px;
+}
+
+.copyright {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+ .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: rgb(231, 147, 14);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+    /* Full-screen navigation styles */
+  .navbar {
+    position: fixed;
+    background: none;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    z-index: 1000;
+    
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.3s ease;
+    opacity: 0;
+    z-index: 999;
+    border-radius: 10%;
+  }
+  
+  .nav-links.open {
+    max-height: 100vh;
+    opacity: 1;
+  }
+
+  .nav-links li {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin: 15px 0;
+  }
+
+  .nav-links.open li {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Stagger the animation for each item */
+  .nav-links.open li:nth-child(1) { transition-delay: 0.1s; }
+  .nav-links.open li:nth-child(2) { transition-delay: 0.2s; }
+  .nav-links.open li:nth-child(3) { transition-delay: 0.3s; }
+  .nav-links.open li:nth-child(4) { transition-delay: 0.4s; }
+  .nav-links.open li:nth-child(5) { transition-delay: 0.5s; }
+
+  /* Make links larger for mobile */
+  .nav-links li a {
+    font-size: 1.5rem;
+    color: #222;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

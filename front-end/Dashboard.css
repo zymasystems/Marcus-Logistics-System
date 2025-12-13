@@ -8,69 +8,54 @@
 body {
   font-family: "Segoe UI", sans-serif;
   background: #f5f9fc;
-  color: #222;
 }
 
 /* NAVBAR */
-.navbar {
-  position: fixed;
+.navbar{
+  position:absolute ;        /* stay at top while scrolling */
   top: 0;
   left: 0;
   width: 100%;
-  background: #222;
-  padding: 15px 20px;
+  z-index: 1000;          /* ensure it sits above hero */
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  z-index: 1000;
+  justify-content: right;
+   background: #2222227c;          /* 15 %‑opaque white */
+  backdrop-filter: blur(12px);                /* glassy blur */
+  -webkit-backdrop-filter: blur(12px);        /* Safari/iOS */
+  padding: 20px 10%;
 }
 
-/* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 .nav-links li a {
-  color: #fff;
   text-decoration: none;
+  color: #ffffff;
   font-weight: 500;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
-.nav-links li a:hover {
-  color: #00aaff;
+.nav-links li a:hover{
+  color: #ffc107;
+  font-weight: bold;
 }
-
 /* MOBILE MENU BUTTON */
+.nav-links{display:flex;gap:20px;}
 .menu-toggle {
   display: none;
-  flex-direction: column;
-  gap: 5px;
+  background: none;
   border: none;
-  background: transparent;
+  color: white;
+  font-size: 2rem;
   cursor: pointer;
-  margin-right: auto;
-}
-
-.menu-toggle span {
-  width: 28px;
-  height: 3px;
-  background: #fff;
-  transition: 0.3s;
-}
-
-.menu-toggle.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.menu-toggle.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  padding: 10px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  z-index: 1001;
 }
 
 /* DASHBOARD SECTION */
@@ -158,7 +143,7 @@ body {
 }
 
 .btn.primary {
-  background: #00aaff;
+  background: #1f3a93;
   color: #fff;
 }
 
