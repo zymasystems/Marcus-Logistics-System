@@ -48,9 +48,9 @@
 
                 <!-- AUTO-FILLED CLIENT INFO -->
                 <div id="bookingSavedClient" class="client-preview">
-                    <p><strong>Name:</strong> John Doe</p>
-                    <p><strong>WhatsApp:</strong> +27 76 123 4567</p>
-                 <p><strong>Email:</strong> john@email.com</p>
+                    <p><strong>Name:</strong> <span id="clientName">John Doe</span></p>
+                    <p><strong>WhatsApp:</strong> <span id="clientPhone">+27 76 123 4567</span></p>
+                    <p><strong>Email:</strong> <span id="clientEmail">john@email.com</span></p>
                 </div>
  
 
@@ -61,26 +61,26 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label>First Name</label>
-                        <input type="text" placeholder="Enter first name" required />
+                        <input type="text" name="firstName" placeholder="Enter first name" required />
                     </div>
                     <div class="form-group">
                         <label>Last Name</label>
-                        <input type="text" placeholder="Enter last name" required />
+                        <input type="text" name="lastName" placeholder="Enter last name" required />
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label>WhatsApp Number</label>
-                        <input type="tel" placeholder="e.g. +27 76 123 4567" required />
+                        <input type="tel" name="phone" placeholder="e.g. +27 76 123 4567" required />
                     </div>
                     <div class="form-group">
                         <label>Email (Optional)</label>
-                        <input type="email" placeholder="example@email.com" />
+                        <input type="email" name="email" placeholder="example@email.com" />
                     </div>
                 </div>
             </div>
-            
+
                 <!-- TRIP DETAILS -->
                 <h3 class="form-section-title"><i class="fas fa-map-marker-alt"></i> Trip Details</h3>
                 <div class="form-row">
@@ -139,5 +139,6 @@
     </section>
 
     <script src="script.js"></script>
+    <script src="booking.js"></script>
 </body>
 </html>

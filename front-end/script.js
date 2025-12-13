@@ -42,19 +42,28 @@ document.addEventListener('DOMContentLoaded', () => {
     /* =========================
        CLIENT MODE TOGGLE (REUSABLE)
     ========================= */
-    function setupClientToggle(modeId, manualId, savedId) {
-        const mode = document.getElementById(modeId);
-        const manual = document.getElementById(manualId);
-        const saved = document.getElementById(savedId);
+   function setupClientToggle(modeId, manualId, savedId) {
+    const mode = document.getElementById(modeId);
+    const manual = document.getElementById(manualId);
+    const saved = document.getElementById(savedId);
 
-        if (!mode || !manual || !saved) return;
+    if (!mode || !manual || !saved) return;
 
-        mode.addEventListener('change', () => {
-            const isOther = mode.value === 'other';
-            manual.style.display = isOther ? 'block' : 'none';
-            saved.style.display = isOther ? 'none' : 'block';
+    function updateState() {
+        const isOther = mode.value === 'other';
+        manual.style.display = isOther ? 'block' : 'none';
+        saved.style.display = isOther ? 'none' : 'block';
+
+        // Disable hidden inputs to prevent validation errors
+        manual.querySelectorAll('input, select, textarea').forEach(input => {
+            input.disabled = !isOther;
         });
     }
+
+    mode.addEventListener('change', updateState);
+    updateState(); // initial state on page load
+}
+
 
     /* =========================
        INITIALISE PER PAGE
@@ -75,3 +84,4 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
 });
+
