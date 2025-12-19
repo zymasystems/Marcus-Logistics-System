@@ -85,18 +85,22 @@
                 <h3 class="form-section-title"><i class="fas fa-map-marker-alt"></i> Trip Details</h3>
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Pickup Location</label>
+                        <label>Pickup Location *</label>
                         <input type="text" placeholder="Enter pickup address" required />
+                        <input style="margin-top: 10px;" type="text" placeholder="Suburb (optional)" />
+                        <input style="margin-top: 10px;" type="text" placeholder="City" required />
                     </div>
                     <div class="form-group">
-                        <label>Destination</label>
+                        <label>Destination *</label>
                         <input type="text" placeholder="Enter destination address" required />
+                        <input style="margin-top: 10px;" type="text" placeholder="Suburb (optional) " />
+                        <input style="margin-top: 10px;" type="text" placeholder="City" required />
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Date</label>
+                        <label>Date *</label>
                         <input type="date" required />
                     </div>
                    
@@ -104,7 +108,7 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Luggage</label>
+                        <label>Luggage *</label>
                         <select required>
                             <option value="">Select luggage amount</option>
                             <option>Small (1–2 bags)</option>
@@ -113,7 +117,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Passengers</label>
+                        <label>Passengers *</label>
                         <select required>
                             <option value="">Number of passengers</option>
                             <option>1</option><option>2</option><option>3</option>

@@ -19,7 +19,13 @@ if (bookingForm) {
         }
 
         const pickup = bookingForm.querySelector('input[placeholder*="pickup"]').value;
+        const pickupCity = bookingForm.querySelector('input[placeholder="City"]').value;
+        const pickupSuburbInput = bookingForm.querySelectorAll('input[placeholder*="Suburb"]')[0];
+        const pickupSuburb = pickupSuburbInput ? pickupSuburbInput.value : '';
+        const destinationSuburbInput = bookingForm.querySelectorAll('input[placeholder*="Suburb"]')[1];
+        const destinationSuburb = destinationSuburbInput ? destinationSuburbInput.value : '';
         const destination = bookingForm.querySelector('input[placeholder*="destination"]').value;
+        const destinationCity = bookingForm.querySelectorAll('input[placeholder="City"]')[1].value;
         const date = bookingForm.querySelector('input[type="date"]').value;
         const luggage = bookingForm.querySelectorAll('select')[1].value;
         const passengers = bookingForm.querySelectorAll('select')[2].value;
@@ -32,8 +38,12 @@ if (bookingForm) {
 📞 WhatsApp: ${phone}
 📧 Email: ${email}
 
-📍 Pickup: ${pickup}
-🏁 Destination: ${destination}
+📍 Pickup: ${pickup}, 
+            ${pickupSuburb}, 
+            ${pickupCity}
+🏁 Destination: ${destination}, 
+                ${destinationSuburb}, 
+                ${destinationCity}
 📅 Date: ${date}
 💼 Luggage: ${luggage}
 👥 Passengers: ${passengers}
