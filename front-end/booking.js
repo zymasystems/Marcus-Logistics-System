@@ -4,46 +4,42 @@ if (bookingForm) {
     bookingForm.addEventListener('submit', e => {
         e.preventDefault();
 
-        const isOther = document.getElementById('bookingClientMode').value === 'other';
+        // Manual client info ONLY
+        const firstName = bookingForm.querySelector('input[name="firstName"]').value;
+        const lastName = bookingForm.querySelector('input[name="lastName"]').value;
+        const name = `${firstName} ${lastName}`;
 
-        let name, phone, email;
-
-        if (isOther) {
-            name = document.querySelector('#bookingManualClient input[type="text"]').value;
-            phone = document.querySelector('#bookingManualClient input[type="tel"]').value;
-            email = document.querySelector('#bookingManualClient input[type="email"]').value || 'N/A';
-        } else {
-            name = document.getElementById('clientName').textContent;
-            phone = document.getElementById('clientPhone').textContent;
-            email = document.getElementById('clientEmail').textContent;
-        }
+        const phone = bookingForm.querySelector('input[name="phone"]').value;
+        const email = bookingForm.querySelector('input[name="email"]').value || 'N/A';
 
         const pickup = bookingForm.querySelector('input[placeholder*="pickup"]').value;
-        const pickupCity = bookingForm.querySelector('input[placeholder="City"]').value;
-        const pickupSuburbInput = bookingForm.querySelectorAll('input[placeholder*="Suburb"]')[0];
-        const pickupSuburb = pickupSuburbInput ? pickupSuburbInput.value : '';
-        const destinationSuburbInput = bookingForm.querySelectorAll('input[placeholder*="Suburb"]')[1];
-        const destinationSuburb = destinationSuburbInput ? destinationSuburbInput.value : '';
+        const pickupCity = bookingForm.querySelectorAll('input[placeholder="City"]')[0].value;
+        const pickupSuburb = bookingForm.querySelectorAll('input[placeholder*="Suburb"]')[0]?.value || '';
+
         const destination = bookingForm.querySelector('input[placeholder*="destination"]').value;
         const destinationCity = bookingForm.querySelectorAll('input[placeholder="City"]')[1].value;
+        const destinationSuburb = bookingForm.querySelectorAll('input[placeholder*="Suburb"]')[1]?.value || '';
+
         const date = bookingForm.querySelector('input[type="date"]').value;
-        const luggage = bookingForm.querySelectorAll('select')[1].value;
-        const passengers = bookingForm.querySelectorAll('select')[2].value;
+        const luggage = bookingForm.querySelectorAll('select')[0].value;
+        const passengers = bookingForm.querySelectorAll('select')[1].value;
         const notes = bookingForm.querySelector('textarea').value || 'None';
 
-        const message = 
+        const message =
 `🚗 NEW RIDE BOOKING
 
 👤 Name: ${name}
 📞 WhatsApp: ${phone}
 📧 Email: ${email}
 
-📍 Pickup: ${pickup}, 
-            ${pickupSuburb}, 
-            ${pickupCity}
-🏁 Destination: ${destination}, 
-                ${destinationSuburb}, 
-                ${destinationCity}
+📍 Pickup: ${pickup},
+${pickupSuburb},
+${pickupCity}
+
+🏁 Destination: ${destination},
+${destinationSuburb},
+${destinationCity}
+
 📅 Date: ${date}
 💼 Luggage: ${luggage}
 👥 Passengers: ${passengers}

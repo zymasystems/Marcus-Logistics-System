@@ -4,41 +4,72 @@ if (courierForm) {
     courierForm.addEventListener('submit', e => {
         e.preventDefault();
 
-        const isOther = document.getElementById('courierClientMode').value === 'other';
+        /* =========================
+           SENDER INFO (MANUAL)
+        ========================= */
+        const firstName = courierForm.querySelector('input[name="firstName"]').value;
+        const lastName = courierForm.querySelector('input[name="lastName"]').value;
+        const name = `${firstName} ${lastName}`;
 
-        let name, phone;
+        const phone = courierForm.querySelector('input[name="phone"]').value;
+        const email = courierForm.querySelector('input[name="email"]').value || 'N/A';
 
-        if (isOther) {
-            name = document.querySelector('#courierManualClient input[type="text"]').value.trim();
-            phone = document.querySelector('#courierManualClient input[type="tel"]').value.trim();
-        } else {
-            const savedClient = document.getElementById('courierSavedClient');
-            name = savedClient.querySelector('p:nth-child(1)').textContent.replace('Name: ', '').trim();
-            phone = savedClient.querySelector('p:nth-child(2)').textContent.replace('WhatsApp: ', '').trim();
-        }
-
+        /* =========================
+           PARCEL DETAILS
+        ========================= */
         const selects = courierForm.querySelectorAll('select');
         const parcelType = selects[0].value;
         const weight = selects[1].value;
 
+        /* =========================
+           PICKUP DETAILS
+        ========================= */
         const pickup = courierForm.querySelector('input[placeholder*="pickup"]').value;
-        const delivery = courierForm.querySelector('input[placeholder*="delivery"]').value;
-        const date = courierForm.querySelector('input[type="date"]').value;
+        const pickupSuburb =
+            courierForm.querySelectorAll('input[placeholder*="Suburb"]')[0]?.value || '';
+        const pickupCity =
+            courierForm.querySelectorAll('input[placeholder="City"]')[0].value;
 
+        /* =========================
+           DESTINATION DETAILS
+        ========================= */
+        const destination =
+            courierForm.querySelector('input[placeholder*="destination"]').value;
+        const destinationSuburb =
+            courierForm.querySelectorAll('input[placeholder*="Suburb"]')[1]?.value || '';
+        const destinationCity =
+            courierForm.querySelectorAll('input[placeholder="City"]')[1].value;
+
+        /* =========================
+           DATE & NOTES
+        ========================= */
+        const date = courierForm.querySelector('input[type="date"]').value;
         const notes = courierForm.querySelector('textarea').value || 'None';
 
+        /* =========================
+           MESSAGE
+        ========================= */
         const message =
 `📦 NEW PARCEL REQUEST
 
 👤 Sender: ${name}
 📞 WhatsApp: ${phone}
+📧 Email: ${email}
 
-📦 Parcel: ${parcelType}
-⚖️ Weight: ${weight}
+📦 Parcel Type: ${parcelType}
+⚖️ Estimated Weight: ${weight}
 
-📍 Pickup: ${pickup}
-🏁 Delivery: ${delivery}
-📅 Date: ${date}
+📍 Pickup:
+${pickup}
+${pickupSuburb}
+${pickupCity}
+
+🏁 Delivery:
+${destination}
+${destinationSuburb}
+${destinationCity}
+
+📅 Pickup Date: ${date}
 
 📝 Instructions: ${notes}`;
 

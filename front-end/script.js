@@ -69,19 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
        INITIALISE PER PAGE
     ========================= */
 
-    // Booking page
-    setupClientToggle(
-        'bookingClientMode',
-        'bookingManualClient',
-        'bookingSavedClient'
-    );
-
-    // Courier page
-    setupClientToggle(
-        'courierClientMode',
-        'courierManualClient',
-        'courierSavedClient'
-    );
+    
 
 });
 
