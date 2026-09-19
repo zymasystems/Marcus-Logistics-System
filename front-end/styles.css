@@ -834,6 +834,41 @@ body {
   font-size: 0.9rem;
 }
 
+.made-by {
+  margin-top: 8px;
+  color: #7d7d7d;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.made-by .heart {
+  display: inline-block;
+  color: #f4b844;
+  animation: heartbeat 1.6s ease-in-out infinite;
+}
+
+.made-by a {
+  color: #d8d8d8;
+  font-weight: 600;
+  text-decoration: none;
+  background-image: linear-gradient(#ffc107, #ffc107);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1.5px;
+  transition: color 0.25s ease, background-size 0.25s ease;
+  padding-bottom: 1px;
+}
+
+.made-by a:hover {
+  color: #ffc107;
+  background-size: 100% 1.5px;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
 
 /* Booking Page Styles */
 .booking-section {
