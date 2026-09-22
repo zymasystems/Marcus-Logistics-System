@@ -1,4 +1,11 @@
+# robots.txt for Marcus Logistics and Shuttle Services (Pty) Ltd
+# https://logisticsmarcus.co.za/
+
 User-agent: *
 Allow: /
+
+# Post-submission ticket page - it is only reached after submitting the booking /
+# parcel form and is rendered from sessionStorage, so it has no crawlable content.
+Disallow: /front-end/confirm.html
 
 Sitemap: https://logisticsmarcus.co.za/sitemap.xml

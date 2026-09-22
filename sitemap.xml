@@ -1,32 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Sitemap for Marcus Logistics and Shuttle Services (Pty) Ltd - https://logisticsmarcus.co.za/ -->
+<!-- Page names must match the real file names on disk (hosting is case-sensitive). -->
+<!-- front-end/confirm.html is intentionally excluded: it is a post-submission ticket page
+     rendered from sessionStorage data and is blocked in robots.txt. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
         <loc>https://logisticsmarcus.co.za/</loc>
-        <lastmod>2026-07-30</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://logisticsmarcus.co.za/front-end/userDashboard.html</loc>
-        <lastmod>2026-07-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
         <loc>https://logisticsmarcus.co.za/front-end/booking.html</loc>
-        <lastmod>2026-07-30</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://logisticsmarcus.co.za/front-end/Courier.html</loc>
-        <lastmod>2026-07-30</lastmod>
+        <lastmod>2026-09-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://logisticsmarcus.co.za/front-end/userDashboard.html</loc>
+        <lastmod>2026-09-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://logisticsmarcus.co.za/front-end/Signup.html</loc>
+        <lastmod>2026-09-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://logisticsmarcus.co.za/front-end/Login.html</loc>
+        <lastmod>2026-09-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
     </url>
 
 </urlset>
